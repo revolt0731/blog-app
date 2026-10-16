@@ -36,7 +36,7 @@ export function usePosts(){
         isLoading.value=true
         error.value=null
         try{
-            const res=await fetch('../public/posts.json')
+            const res=await fetch('/posts.json')
             if(!res.ok){
                 throw new Error('HTTP ${res.status}')
             }
